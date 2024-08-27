@@ -66,7 +66,7 @@
     function P(a, b, d, f) {
         var c = window.ShadyDOM;
         if (a.shadyDomFastWalk && c && c.inUse) {
-            if (b.nodeType === Node.ELEMENT_NODE && d(b), b.querySelectorAll) for (a = c.nativeMethods.querySelectorAll.call(b, "*"),
+            if (b.nodeType === Node.ELEMENT_NODE && d(b), b.querySelectorAll) for (a = c.nativeMethods.querySelectorAll.call(b, "*"), 
             b = 0; b < a.length; b++) d(a[b]);
         } else M(b, d, f);
     }
@@ -205,7 +205,7 @@
             if (e.localName !== d) throw Error("Failed to construct '" + d + "': The constructed element's local name is incorrect.");
             return e;
         } catch (g) {
-            return X(g), b = null === f ? n.call(b, d) : p.call(b, f, d), Object.setPrototypeOf(b, HTMLUnknownElement.prototype),
+            return X(g), b = null === f ? n.call(b, d) : p.call(b, f, d), Object.setPrototypeOf(b, HTMLUnknownElement.prototype), 
             b.__CE_state = 2, b.__CE_definition = void 0, R(a, b), b;
         }
         b = null === f ? n.call(b, d) : p.call(b, f, d);
@@ -214,7 +214,7 @@
     }
     function X(a) {
         var b = "", d = "", f = 0, c = 0;
-        a instanceof Error ? (b = a.message, d = a.sourceURL || a.fileName || "", f = a.line || a.lineNumber || 0,
+        a instanceof Error ? (b = a.message, d = a.sourceURL || a.fileName || "", f = a.line || a.lineNumber || 0, 
         c = a.column || a.columnNumber || 0) : b = "Uncaught " + String(a);
         var e = void 0;
         void 0 === ErrorEvent.prototype.initErrorEvent ? e = new ErrorEvent("error", {
@@ -224,7 +224,7 @@
             lineno: f,
             colno: c,
             error: a
-        }) : (e = document.createEvent("ErrorEvent"), e.initErrorEvent("error", !1, !0, b, d, f),
+        }) : (e = document.createEvent("ErrorEvent"), e.initErrorEvent("error", !1, !0, b, d, f), 
         e.preventDefault = function() {
             Object.defineProperty(this, "defaultPrevented", {
                 configurable: !0,
@@ -261,7 +261,7 @@
         this.h = a;
         this.g = b;
         V(this.h, this.g);
-        "loading" === this.g.readyState && (this.l = new MutationObserver(this.G.bind(this)),
+        "loading" === this.g.readyState && (this.l = new MutationObserver(this.G.bind(this)), 
         this.l.observe(this.g, {
             childList: !0,
             subtree: !0
@@ -525,8 +525,8 @@
                     var l = this.previousSibling;
                     e.call(this, h, k);
                     g(l || this.parentNode.firstChild, this);
-                } else if ("afterbegin" === h) l = this.firstChild, e.call(this, h, k), g(this.firstChild, l); else if ("beforeend" === h) l = this.lastChild,
-                e.call(this, h, k), g(l || this.firstChild, null); else if ("afterend" === h) l = this.nextSibling,
+                } else if ("afterbegin" === h) l = this.firstChild, e.call(this, h, k), g(this.firstChild, l); else if ("beforeend" === h) l = this.lastChild, 
+                e.call(this, h, k), g(l || this.firstChild, null); else if ("afterend" === h) l = this.nextSibling, 
                 e.call(this, h, k), g(this.nextSibling, l); else throw new SyntaxError("The value provided (" + String(h) + ") is not one of 'beforebegin', 'afterbegin', 'beforeend', or 'afterend'.");
             };
         }
@@ -601,7 +601,7 @@
             var f = document.__CE_registry.C.get(d);
             if (!f) throw Error("Failed to construct a custom element: The constructor was not registered with `customElements`.");
             var c = f.constructionStack;
-            if (0 === c.length) return c = n.call(document, f.localName), Object.setPrototypeOf(c, d.prototype),
+            if (0 === c.length) return c = n.call(document, f.localName), Object.setPrototypeOf(c, d.prototype), 
             c.__CE_state = 1, c.__CE_definition = f, R(a, c), c;
             var e = c.length - 1, g = c[e];
             if (g === Fa) throw Error("Failed to construct '" + f.localName + "': This element was already constructed.");
@@ -1747,6 +1747,12 @@ class ColourThemeService {
         cursor: "big_white",
         focus: "big_white",
         scroll: "big_white",
+        link: "lightblue_orange_lightgreen"
+    }, {
+        name: "white_blue",
+        cursor: "big_white",
+        focus: "big_white",
+        scroll: "big_white",
         link: "yellow_orange_lightgreen"
     } ];
     constructor() {
@@ -2654,7 +2660,7 @@ class ReadAloudService {
     readAloudPreventFlexbox=`${PREFIX}read-aloud-prevent-flexbox`;
     regexWord=/\S+\s*[.,!?]*/g;
     regexSentence=/[^\.!\?]+[\.!\?]+["']?|.+$/g;
-    classReadAloud=`\n\t#${this.readAloudTooltipId} {\n\t\tposition: fixed;\n\t\tbackground-color: rgba(0, 0, 0, 0.7);\n\t\tcolor: white;\n\t\twidth: fit-content;\n\t\tpadding: 1rem;\n\t\tpointer-events: none;\n\t\ttransform: translate(0%, 75%);\n\t\tz-index: 2147483645;\n\t}\n\n\t.${this.readAloudPreventFlexbox} {\n\t\twhite-space: pre-wrap;\n\t}`;
+    classReadAloud=`\n\t#${this.readAloudTooltipId} {\n\t\tposition: fixed;\n\t\tbackground-color: rgba(0, 0, 0, 0.7);\n\t\tcolor: white;\n\t\twidth: fit-content;\n\t\tpadding: 1rem;\n\t\tpointer-events: none;\n\t\ttransform: translate(75px, 50%);\n\t\tz-index: 2147483645;\n\t}\n\n\t.${this.readAloudPreventFlexbox} {\n\t\twhite-space: pre-wrap;\n\t}`;
     constructor() {
         if (readAloudServiceIsInstantiated) {
             throw new Error("ReadAloudService is already instantiated.");
@@ -2774,8 +2780,8 @@ class ReadAloudService {
     createHandler=() => event => {
         switch (event.type) {
           case "pointermove":
-            this.tooltipReadAloud.style.left = `${event.pageX}px`;
-            this.tooltipReadAloud.style.top = `${event.pageY}px`;
+            this.tooltipReadAloud.style.left = `${event.pageX - (window.scrollX || document.documentElement.scrollLeft)}px`;
+            this.tooltipReadAloud.style.top = `${event.pageY - (window.scrollY || document.documentElement.scrollTop)}px`;
             break;
 
           case "pointerdown":
@@ -3124,17 +3130,17 @@ class TextSpacingService {
     }
     setSpacingText=value => {
         const spacingTextValues = [ {
-            name: "spacingTextLabelSmall",
+            name: "spacingTextSmall",
             wordSpacing: ".10em",
             lineHeight: "2em",
             letterSpacing: ".0625em"
         }, {
-            name: "spacingTextLabelBig",
+            name: "spacingTextBig",
             wordSpacing: ".25em",
             lineHeight: "2.5em",
             letterSpacing: ".25em"
         }, {
-            name: "spacingTextLabelHuge",
+            name: "spacingTextHuge",
             wordSpacing: ".5em",
             lineHeight: "3em",
             letterSpacing: ".5em"
@@ -5509,7 +5515,7 @@ editTextSpacingLayout.innerHTML = `\n\t<form>\n\t\t<app-select-edit-value data-n
 class EditTextSpacingComponent extends HTMLElement {
     selectTextSpacingElement=null;
     settingValues=null;
-    textSpacingValues=[ DEFAULT_VALUE, "spacingTextLabelSmall", "spacingTextLabelBig", "spacingTextLabelHuge" ];
+    textSpacingValues=[ DEFAULT_VALUE, "spacingTextSmall", "spacingTextBig", "spacingTextHuge" ];
     handler;
     constructor() {
         super();

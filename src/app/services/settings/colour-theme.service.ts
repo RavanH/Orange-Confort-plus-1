@@ -12,7 +12,8 @@ class ColourThemeService {
 	colourThemeDictionnary: ColourThemeValues[] = [
 		{ name: DEFAULT_VALUE, cursor: DEFAULT_VALUE, focus: DEFAULT_VALUE, scroll: DEFAULT_VALUE, link: DEFAULT_VALUE },
 		{ name: 'reinforcedContrasts', cursor: 'big_black', focus: 'big_black', scroll: 'big_black', link: 'darkblue_orange_darkgreen' },
-		{ name: 'white_black', cursor: 'big_white', focus: 'big_white', scroll: 'big_white', link: 'yellow_orange_lightgreen' }
+		{ name: 'white_black', cursor: 'big_white', focus: 'big_white', scroll: 'big_white', link: 'lightblue_orange_lightgreen' },
+		{ name: 'white_blue', cursor: 'big_white', focus: 'big_white', scroll: 'big_white', link: 'yellow_orange_lightgreen' }
 	];
 
 	constructor() {

@@ -137,11 +137,11 @@
 	"audioPlusDescription": {
 		"message": "Usage mode for people with hearing impairments. Visual equivalents for sound signals and systematic subtitles."
 	},
-	"calmeName": {
-		"message": "Calm"
+	"calmePlusName": {
+		"message": "Calm+"
 	},
-	"calmeDescription": {
-		"message": "Usage mode for highly sensitive people. Pleasant colors and transitions, no animations or interruptions."
+	"calmePlusDescription": {
+		"message": "Mode of use that meets the constraints of hypersensoriality. Pleasant colours and transitions, no animations or interruptions."
 	},
 	"noModifications": {
 		"message": "no modification"
@@ -366,13 +366,13 @@
 	"textSpacing-noModifications": {
 		"message": "no modifications"
 	},
-	"textSpacing-spacingTextLabelSmall": {
+	"textSpacing-spacingTextSmall": {
 		"message": "slightly spaced"
 	},
-	"textSpacing-spacingTextLabelBig": {
+	"textSpacing-spacingTextBig": {
 		"message": "widely spaced"
 	},
-	"textSpacing-spacingTextLabelHuge": {
+	"textSpacing-spacingTextHuge": {
 		"message": "very widely spaced"
 	},
 	"setting-readingGuide": {

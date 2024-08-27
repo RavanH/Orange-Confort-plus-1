@@ -23,7 +23,7 @@ class ReadAloudService {
 		width: fit-content;
 		padding: 1rem;
 		pointer-events: none;
-		transform: translate(0%, 75%);
+		transform: translate(75px, 50%);
 		z-index: 2147483645;
 	}
 
@@ -167,8 +167,8 @@ class ReadAloudService {
 		return (event: any) => {
 			switch (event.type) {
 				case 'pointermove':
-					this.tooltipReadAloud.style.left = `${event.pageX}px`;
-					this.tooltipReadAloud.style.top = `${event.pageY}px`;
+					this.tooltipReadAloud.style.left = `${event.pageX! - (window.scrollX || document.documentElement.scrollLeft)}px`;
+					this.tooltipReadAloud.style.top = `${event.pageY! - (window.scrollY || document.documentElement.scrollTop)}px`;
 					break;
 				case 'pointerdown':
 					speechSynthesis.speak(new SpeechSynthesisUtterance(event.target.innerText));

@@ -137,11 +137,11 @@
 	"audioPlusDescription": {
 		"message": "Mode d’usage destiné aux personnes ayant des contraintes auditives. Des équivalences visuelles au signaux sonores, du sous-titrage systématique."
 	},
-	"calmeName": {
-		"message": "Calme"
+	"calmePlusName": {
+		"message": "Calme+"
 	},
-	"calmeDescription": {
-		"message": "Mode d’usage destiné aux personnes hypersensibles. Des couleurs et des transitions agréables, absence d’animations et d’interruptions."
+	"calmePlusDescription": {
+		"message": "Mode d’usage répondant aux contraintes d’hypersensorialités. Des couleurs et des transitions agréables, absence d’animations et d’interruptions."
 	},
 	"noModifications": {
 		"message": "pas de modification"
@@ -366,13 +366,13 @@
 	"textSpacing-noModifications": {
 		"message": "sans modification"
 	},
-	"textSpacing-spacingTextLabelSmall": {
+	"textSpacing-spacingTextSmall": {
 		"message": "aère un peu"
 	},
-	"textSpacing-spacingTextLabelBig": {
+	"textSpacing-spacingTextBig": {
 		"message": "aère beaucoup"
 	},
-	"textSpacing-spacingTextLabelHuge": {
+	"textSpacing-spacingTextHuge": {
 		"message": "aère énormément"
 	},
 	"setting-readingGuide": {

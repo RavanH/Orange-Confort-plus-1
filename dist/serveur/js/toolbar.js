@@ -1008,6 +1008,12 @@ class ColourThemeService {
         cursor: "big_white",
         focus: "big_white",
         scroll: "big_white",
+        link: "lightblue_orange_lightgreen"
+    }, {
+        name: "white_blue",
+        cursor: "big_white",
+        focus: "big_white",
+        scroll: "big_white",
         link: "yellow_orange_lightgreen"
     } ];
     constructor() {
@@ -1915,7 +1921,7 @@ class ReadAloudService {
     readAloudPreventFlexbox=`${PREFIX}read-aloud-prevent-flexbox`;
     regexWord=/\S+\s*[.,!?]*/g;
     regexSentence=/[^\.!\?]+[\.!\?]+["']?|.+$/g;
-    classReadAloud=`\n\t#${this.readAloudTooltipId} {\n\t\tposition: fixed;\n\t\tbackground-color: rgba(0, 0, 0, 0.7);\n\t\tcolor: white;\n\t\twidth: fit-content;\n\t\tpadding: 1rem;\n\t\tpointer-events: none;\n\t\ttransform: translate(0%, 75%);\n\t\tz-index: 2147483645;\n\t}\n\n\t.${this.readAloudPreventFlexbox} {\n\t\twhite-space: pre-wrap;\n\t}`;
+    classReadAloud=`\n\t#${this.readAloudTooltipId} {\n\t\tposition: fixed;\n\t\tbackground-color: rgba(0, 0, 0, 0.7);\n\t\tcolor: white;\n\t\twidth: fit-content;\n\t\tpadding: 1rem;\n\t\tpointer-events: none;\n\t\ttransform: translate(75px, 50%);\n\t\tz-index: 2147483645;\n\t}\n\n\t.${this.readAloudPreventFlexbox} {\n\t\twhite-space: pre-wrap;\n\t}`;
     constructor() {
         if (readAloudServiceIsInstantiated) {
             throw new Error("ReadAloudService is already instantiated.");
@@ -2035,8 +2041,8 @@ class ReadAloudService {
     createHandler=() => event => {
         switch (event.type) {
           case "pointermove":
-            this.tooltipReadAloud.style.left = `${event.pageX}px`;
-            this.tooltipReadAloud.style.top = `${event.pageY}px`;
+            this.tooltipReadAloud.style.left = `${event.pageX - (window.scrollX || document.documentElement.scrollLeft)}px`;
+            this.tooltipReadAloud.style.top = `${event.pageY - (window.scrollY || document.documentElement.scrollTop)}px`;
             break;
 
           case "pointerdown":
@@ -2385,17 +2391,17 @@ class TextSpacingService {
     }
     setSpacingText=value => {
         const spacingTextValues = [ {
-            name: "spacingTextLabelSmall",
+            name: "spacingTextSmall",
             wordSpacing: ".10em",
             lineHeight: "2em",
             letterSpacing: ".0625em"
         }, {
-            name: "spacingTextLabelBig",
+            name: "spacingTextBig",
             wordSpacing: ".25em",
             lineHeight: "2.5em",
             letterSpacing: ".25em"
         }, {
-            name: "spacingTextLabelHuge",
+            name: "spacingTextHuge",
             wordSpacing: ".5em",
             lineHeight: "3em",
             letterSpacing: ".5em"
@@ -4770,7 +4776,7 @@ editTextSpacingLayout.innerHTML = `\n\t<form>\n\t\t<app-select-edit-value data-n
 class EditTextSpacingComponent extends HTMLElement {
     selectTextSpacingElement=null;
     settingValues=null;
-    textSpacingValues=[ DEFAULT_VALUE, "spacingTextLabelSmall", "spacingTextLabelBig", "spacingTextLabelHuge" ];
+    textSpacingValues=[ DEFAULT_VALUE, "spacingTextSmall", "spacingTextBig", "spacingTextHuge" ];
     handler;
     constructor() {
         super();
